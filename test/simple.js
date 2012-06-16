@@ -2,13 +2,13 @@ var Crawler = require("../lib/crawler").Crawler;
 
 var c = new Crawler({
     "maxConnections":10,
-    "timeout":60,
+    // "timeout":60,
     "debug":true,
-    "callback":function(error,result,$) {
+    callback:function(error,result,$) {
         console.log("Got page");
         $("a").each(function(i,a) {
-            console.log(a.href);
-            //c.queue(a.href);
+             console.log(a.href);
+        //     //c.queue(a.href);
         })
     }
 });
